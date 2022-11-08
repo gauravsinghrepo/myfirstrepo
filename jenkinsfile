@@ -1,8 +1,10 @@
 pipeline{
   agent any
   stages{
-    stage('git checkout'){
-      git 'https://github.com/gauravsinghrepo/myfirstrepo.git'
+    stage{
+	steps('git checkout'){
+          git 'https://github.com/gauravsinghrepo/myfirstrepo.git'
+	}
     }
   }
 }
